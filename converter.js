@@ -10,5 +10,5 @@ function heightConverter () {
     // console.log(cm);
     var result = cm.toFixed(2);
 
-    document.getElementById('result').innerHTML = result + " cm";
+    document.getElementById('result').innerHTML = "Your height: " + result + " cm";
 }
