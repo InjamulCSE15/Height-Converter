@@ -10,5 +10,18 @@ function heightConverter () {
     // console.log(cm);
     var result = cm.toFixed(2);
 
-    document.getElementById('result').innerHTML = "Your height: " + result + " cm";
+    if(feet == '' || inches == ''){
+        document.getElementById('result').innerHTML = `<strong>Please enter feet and inches value!</strong>`
+    }
+    else{
+        document.getElementById('result').innerHTML = "Your height: " + result + " cm";
+    }
+
+}
+
+document.getElementById('reset').addEventListener('click', resetConverter);
+function resetConverter () {
+    document.getElementById('feet').value = '';
+    document.getElementById('inches').value = '';
+    document.getElementById('result').innerHTML = '';
 }
